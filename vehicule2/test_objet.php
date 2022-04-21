@@ -13,4 +13,6 @@
     //détecter le véhicule le plus rapide
     echo 'le véhicule le plus rapide est : '.$voiture->plusRapide($moto).'</br>';
     echo 'le véhicule le plus rapide est : '.$moto->plusRapide($voiture).'</br>';
+
+    echo 'la vitesse de la moto est :'.$moto->getVitesse().'';
 ?>

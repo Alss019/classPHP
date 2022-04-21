@@ -17,12 +17,24 @@
         /*------------------------------- 
                     METHODES
         -------------------------------*/
+        public function getNomVehicule()
+        {
+        return $this->nomVehicule;
+        }
+        public function getNbrRoue()
+        {
+        return $this->nbrRoue;
+        }
+        public function getVitesse()
+        {
+        return $this->vitesse;
+        }
         //méthode qui retourne le type de véhicule
         public function detect():string{
-            if($this->nbrRoue == 4){
+            if($this->getNbrRoue() == 4){
                 return "voiture";
             }
-            else if($this->nbrRoue == 2){
+            else if($this->getNbrRoue() == 2){
                 return "moto";
             }
             else{
@@ -35,27 +47,15 @@
         }
         //detecter le véhicule le plus rapide
         public function plusRapide($vehicule):string{
-            if($this->vitesse > $vehicule->vitesse){
+            if($this->getVitesse() > $vehicule->vitesse){
                 return 'Le plus rapide est : '.$this->nomVehicule.'';
             }
-            else if($this->vitesse == $vehicule->vitesse){
+            else if($this->getVitesse() == $vehicule->vitesse){
                 return 'Les véhicules ont la même vitese !!!';
             }
             else{
                 return 'Le plus rapide est : '.$vehicule->nomVehicule.'';
             }
-        }
-        public function getNomVehicule()
-        {
-        return $this->nomVehicule;
-        }
-        public function getNbrRoue()
-        {
-        return $this->nbrRoue;
-        }
-        public function getVitesse()
-        {
-        return $this->vitesse;
         }
     }
 ?>
