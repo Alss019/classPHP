@@ -36,10 +36,10 @@
         }
         public function plusRapide($a){
             if($this->vitesse > $a->vitesse){
-                echo''.$this->nomVehicule.'';
+                echo'Le plus rapide est '.$this->nomVehicule.'';
             }
             else{
-                echo ''.$a->nomVehicule.'';
+                echo 'Le plus rapide est '.$a->nomVehicule.'';
             }
         }
     };
